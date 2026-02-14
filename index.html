@@ -13,12 +13,12 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   color: #fff;
   font-family: 'Georgia', serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
 
   background-image:
@@ -33,6 +33,10 @@ body {
 .container {
   padding: 2rem;
   max-width: 900px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header {
@@ -87,6 +91,20 @@ body {
   opacity: 0.9;
 }
 
+.footer-logo {
+  margin-top: auto;
+  padding: 1.5rem 0 2rem;
+}
+
+.footer-logo img {
+  display: block;
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+  filter: brightness(0) invert(1);
+}
+
 @media (max-width: 600px) {
   .number {
     font-size: 2.2rem;
@@ -105,6 +123,8 @@ body {
   <div class="header">
     <h1>INMA & PEDRO</h1>
     <p>Destino final · 15 · 08 · 2026</p>
+    <br>
+    <br>
   </div>
 
   <div class="countdown">
@@ -126,9 +146,14 @@ body {
     </div>
   </div>
 
+    <br><br>
   <div class="travel-text" id="travelText"></div>
 
 </div>
+
+  <div class="footer-logo">
+    <img src="comite-inma-sf.png" alt="Comite Inma" />
+  </div>
 
 <script>
 const targetDate = new Date(2026, 7, 15, 0, 0, 0);
@@ -159,9 +184,9 @@ function updateCountdown() {
   document.getElementById("travelText").innerHTML = `
     ✈️ Faltan <strong>${days}</strong> días de trayecto<br>
     🌅 <strong>${sunsets}</strong> atardeceres por recorrer<br>
-    🧭 Aproximadamente <strong>${weekends}</strong> fines de semana intermedios
+    🧭 y aproximadamente <strong>${weekends}</strong> fines de semana
     <div class="final-line">
-      El próximo viaje no aparece en Google Maps.
+      El próximo viaje no aparece en Google Maps🗺️
     </div>
   `;
 }
@@ -171,4 +196,4 @@ setInterval(updateCountdown, 1000);
 </script>
 
 </body>
-</htm
+</html>
