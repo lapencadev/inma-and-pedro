@@ -13,12 +13,17 @@ Web que muestra:
 Un detalle pequeño pero bonito. 🌙✨
 
 ## 🎨 Características
-
-- Diseño minimalista y elegante
+ Diseño minimalista y elegante
 - Tipografía sofisticada (Georgia)
 - Contador que actualiza cada segundo
 - Easter eggs que se irán sumando el 13 de cada mes hasta la fecha.
 - Completamente adaptable a móviles
+
+## 🧩 Organización del código
+
+- `index.html`: estructura y contenido de la página.
+- `styles.css`: estilos visuales y responsive.
+- `script.js`: lógica del contador y texto dinámico.
 
 ## 🔗URL
 Puedes ver el resultado [aquí](https://inma-y-pedro.info/)
