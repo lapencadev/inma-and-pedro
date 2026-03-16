@@ -1,4 +1,4 @@
-const targetDate = new Date(2026, 8, 15, 0, 0, 0);
+const targetDate = new Date(2026, 7, 15, 0, 0, 0);
 const monthlyEggStartDate = new Date(2026, 2, 15, 0, 0, 0);
 
 const monthlyEggElement = document.getElementById("monthlyEgg");
@@ -7,7 +7,7 @@ function calculateMonthsLeft(now, endDate) {
   let monthsLeft = (endDate.getFullYear() - now.getFullYear()) * 12;
   monthsLeft += endDate.getMonth() - now.getMonth();
 
-  if (now.getDate() > endDate.getDate()) {
+  if (now.getMonth() > endDate.getMonth()) {
     monthsLeft -= 1;
   }
 
