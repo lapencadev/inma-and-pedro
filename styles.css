@@ -22,11 +22,12 @@ body {
 
 .container {
   padding: 2rem;
+  padding-top: 3rem;
   max-width: 900px;
-  flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .header {
@@ -141,8 +142,7 @@ body {
 }
 
 .footer-logo {
-  margin-top: auto;
-  padding: 1.5rem 0 2rem;
+  padding: 1rem 0 1.5rem;
 }
 
 .footer-logo img {
@@ -153,6 +153,99 @@ body {
   opacity: 0.9;
   filter: brightness(0) invert(1);
 }
+
+.despedida {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  width: min(600px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.despedida-toggle {
+  background: linear-gradient(125deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
+  border: 1px solid rgba(255,255,255,0.32);
+  border-radius: 12px;
+  color: #fff;
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 0.7rem 1.4rem;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+  transition: background 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+}
+
+.despedida-toggle:hover {
+  background: linear-gradient(125deg, rgba(255,255,255,0.26), rgba(255,255,255,0.1));
+  border-color: rgba(255,255,255,0.55);
+}
+
+.despedida-arrow {
+  display: inline-block;
+  font-size: 0.75rem;
+}
+
+.despedida-gallery {
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0.25rem;
+}
+
+.gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-track img {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 320px;
+  height: 180px;
+  object-fit: contain;
+  background: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  scroll-snap-align: start;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.gallery-nav:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.gallery-prev { left: 6px; }
+.gallery-next { right: 6px; }
 
 @media (max-width: 600px) {
   .number {
@@ -169,6 +262,22 @@ body {
   }
 
   .monthly-egg-main {
+    font-size: 1.1rem;
+  }
+
+  .despedida {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .gallery-track img {
+    max-width: 85vw;
+    height: 52vw;
+  }
+
+  .gallery-nav {
+    width: 32px;
+    height: 32px;
     font-size: 1.1rem;
   }
 }
