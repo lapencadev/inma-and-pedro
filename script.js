@@ -74,3 +74,22 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+const despedidaToggle = document.getElementById("despedidaToggle");
+const despedidaGallery = document.getElementById("despedidaGallery");
+const galleryTrack = document.getElementById("galleryTrack");
+
+despedidaToggle.addEventListener("click", () => {
+  const isOpen = despedidaToggle.getAttribute("aria-expanded") === "true";
+  despedidaToggle.setAttribute("aria-expanded", String(!isOpen));
+  despedidaGallery.hidden = isOpen;
+  if (!isOpen) galleryTrack.scrollLeft = 0;
+});
+
+document.querySelector(".gallery-prev").addEventListener("click", () => {
+  galleryTrack.scrollBy({ left: -270, behavior: "smooth" });
+});
+
+document.querySelector(".gallery-next").addEventListener("click", () => {
+  galleryTrack.scrollBy({ left: 270, behavior: "smooth" });
+});
