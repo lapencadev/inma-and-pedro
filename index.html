@@ -16,28 +16,34 @@
     <p>Destino final · 15 · 08 · 2026</p>
   </div>
 
-  <div class="countdown">
-    <div class="time-box">
-      <div class="number" id="days">0</div>
-      <div class="label">Días</div>
+  <div class="countdown-wrap" id="countdownWrap">
+    <div class="milestone-badge" id="milestoneBadge" aria-live="polite" hidden></div>
+
+    <div class="countdown">
+      <div class="time-box">
+        <div class="number" id="days">0</div>
+        <div class="label">Días</div>
+      </div>
+      <div class="time-box">
+        <div class="number" id="hours">0</div>
+        <div class="label">Horas</div>
+      </div>
+      <div class="time-box">
+        <div class="number" id="minutes">0</div>
+        <div class="label">Minutos</div>
+      </div>
+      <div class="time-box">
+        <div class="number" id="seconds">0</div>
+        <div class="label">Segundos</div>
+      </div>
     </div>
-    <div class="time-box">
-      <div class="number" id="hours">0</div>
-      <div class="label">Horas</div>
-    </div>
-    <div class="time-box">
-      <div class="number" id="minutes">0</div>
-      <div class="label">Minutos</div>
-    </div>
-    <div class="time-box">
-      <div class="number" id="seconds">0</div>
-      <div class="label">Segundos</div>
-    </div>
+
+    <section class="monthly-egg" id="monthlyEgg" aria-live="polite"></section>
+
+    <div class="travel-text" id="travelText"></div>
   </div>
 
-  <section class="monthly-egg" id="monthlyEgg" aria-live="polite"></section>
-
-  <div class="travel-text" id="travelText"></div>
+  <section class="celebration" id="celebration" aria-live="polite" hidden></section>
 
   <section class="despedida" id="despedida">
     <button class="despedida-toggle" id="despedidaToggle" aria-expanded="false">
